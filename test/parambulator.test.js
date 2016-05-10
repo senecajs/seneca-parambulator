@@ -28,4 +28,29 @@ describe('parambulator', function () {
         })
       })
   })
+
+  it('happy', function (done) {
+    var si = Seneca({log: 'silent', legacy: {error_codes: false, validate: true}})
+      .use('entity')
+      .use('../parambulator')
+      .add({a: 1, b: {entity$: 'a/b/c'}}, function (msg, done) {
+        done(null, {c: msg.b.c})
+      })
+
+    si
+      .act('a:1', {b: si.make('a/b/c', {c: 3})}, function (err, out) {
+        if (err) return done(err)
+
+        Assert.equal(3, out.c)
+
+        this.act('a:1', {b: si.make('x/y/z', {c: 3})}, function (err, out) {
+          Assert.equal('act_invalid_msg', err.code)
+
+          this.act('a:1,b:{c:3}', function (err, out) {
+            Assert.equal('act_invalid_msg', err.code)
+            done()
+          })
+        })
+      })
+  })
 })
