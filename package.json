@@ -1,6 +1,6 @@
 {
   "name": "seneca-parambulator",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Seneca plugin that provides parambulator message validation.",
   "main": "parambulator.js",
   "license": "MIT",
