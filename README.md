@@ -33,7 +33,7 @@ require('seneca')()
 ## Usage
 
 You can validate action messages by providing
-[parambulator](github.com/rjrodger/parambulator) rules as part of the
+[parambulator](github.com/senecajs/seneca-parambulator) rules as part of the
 action definition.
 
 ```js
