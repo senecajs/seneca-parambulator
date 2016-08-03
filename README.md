@@ -14,7 +14,6 @@ This plugin is included by default in Seneca 2.x.
 **NOTE**: This plugin will not be included by default in Seneca 3.x
   and above, and will need to be installed manually.
 
-(Seneca 3.x is due for release late June 2016).
 
 ## Installation
 This is needed only for Seneca 3.x and above.
@@ -33,7 +32,7 @@ require('seneca')()
 ## Usage
 
 You can validate action messages by providing
-[parambulator](github.com/senecajs/seneca-parambulator) rules as part of the
+[parambulator](https://github.com/senecajs/seneca-parambulator) rules as part of the
 action definition.
 
 ```js
