@@ -1,7 +1,7 @@
 ![Seneca](http://senecajs.org/files/assets/seneca-logo.png)
 
 > A [Seneca.js][] plugin that validates messages using the
-> [parambulator](github.com/rjrodger/parambulator) module.
+> [parambulator](https://github.com/rjrodger/parambulator) module.
 
 # seneca-parambulator
 [![npm version][npm-badge]][npm-url]
@@ -14,7 +14,6 @@ This plugin is included by default in Seneca 2.x.
 **NOTE**: This plugin will not be included by default in Seneca 3.x
   and above, and will need to be installed manually.
 
-(Seneca 3.x is due for release late June 2016).
 
 ## Installation
 This is needed only for Seneca 3.x and above.
@@ -33,7 +32,7 @@ require('seneca')()
 ## Usage
 
 You can validate action messages by providing
-[parambulator](github.com/rjrodger/parambulator) rules as part of the
+[parambulator](https://github.com/senecajs/seneca-parambulator) rules as part of the
 action definition.
 
 ```js
@@ -73,10 +72,10 @@ Licensed under [MIT][].
 [Seneca.js]: https://www.npmjs.com/package/seneca
 [@senecajs]: http://twitter.com/senecajs
 [senecajs.org]: http://senecajs.org/
-[travis-badge]: https://travis-ci.org/rjrodger/seneca-parambulator.svg
-[travis-url]: https://travis-ci.org/rjrodger/seneca-parambulator
+[travis-badge]: https://travis-ci.org/senecajs/seneca-parambulator.svg
+[travis-url]: https://travis-ci.org/senecajs/seneca-parambulator
 [gitter-badge]: https://badges.gitter.im/Join%20Chat.svg
-[gitter-url]: https://gitter.im/rjrodger/seneca-parambulator
-[github issue]: https://github.com/rjrodger/seneca-parambulator/issues
+[gitter-url]: https://gitter.im/senecajs/seneca
+[github issue]: https://github.com/senecajs/seneca-parambulator/issues
 [david-badge]: https://david-dm.org/rjrodger/seneca-parambulator.svg
 [david-url]: https://david-dm.org/rjrodger/seneca-parambulator
