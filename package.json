@@ -9,7 +9,10 @@
     "Richard Rodger (http://richardrodger.com)"
   ],
   "scripts": {
-    "test": "lab -v -P test -L -t 80"
+   "test": "lab -v -P test -L -t 80",
+   "coveralls": "lab -s -P test -r lcov | coveralls",
+   "coverage": "lab -v -P test -L -t 80 -r html > coverage.html",
+   "annotate": "docco whatevs.js lib/*.js -o docs/annotated"
   },
   "repository": {
     "type": "git",
@@ -23,15 +26,15 @@
     "parambulator"
   ],
   "dependencies": {
-    "lodash": "4.5.0",
+    "lodash": "^4.0.0",
     "parambulator": "1.5.2"
   },
   "devDependencies": {
-    "eslint-config-seneca": "1.1.2",
-    "eslint-plugin-standard": "1.3.1",
+    "eslint-config-seneca": "1.x.x",
+    "eslint-plugin-standard": "1.x.x",
     "lab": "6.2.x",
-    "seneca": "senecajs/seneca",
-    "seneca-entity": "senecajs/seneca-entity"
+    "seneca": "^2.0.0",
+    "seneca-entity": "1.2.0"
   },
   "peerDependencies": {
     "seneca": "*"
