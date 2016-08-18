@@ -1,10 +1,10 @@
 require('seneca')
     .use('parambulator') // not needed if Seneca 2.x
     .add(
-      {
-        a: 1,
-        b: {required$: true}
-      },
+  {
+    a: 1,
+    b: {required$: true}
+  },
       function (msg, done) {
         done(null, {c: msg.b})
       })
