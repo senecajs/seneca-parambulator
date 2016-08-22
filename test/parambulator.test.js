@@ -11,7 +11,7 @@ var it = lab.it
 
 
 describe('parambulator', function () {
-  it('happy', { timeout: 4000 }, function (done) {
+  it('happy', { timeout: 6000 }, function (done) {
     Seneca({log: 'silent', legacy: {error_codes: false, validate: true}})
       .use('../parambulator')
       .add({a: 1, b: {required$: true}}, function (msg, done) {
@@ -29,7 +29,7 @@ describe('parambulator', function () {
       })
   })
 
-  it('happy', { timeout: 4000 }, function (done) {
+  it('happy', { timeout: 6000 }, function (done) {
     var si = Seneca({log: 'silent', legacy: {error_codes: false, validate: true}})
       .use('entity')
       .use('../parambulator')
