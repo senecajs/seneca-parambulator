@@ -14,6 +14,9 @@ This plugin is included by default in Seneca 2.x.
 **NOTE**: This plugin will not be included by default in Seneca 3.x
   and above, and will need to be installed manually.
 
+### Seneca compatibility
+
+Supports Seneca versions **1.x** - **3.x**
 
 ## Installation
 This is needed only for Seneca 3.x and above.
