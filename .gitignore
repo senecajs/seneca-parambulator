@@ -16,5 +16,5 @@ node_modules
 *~
 .DS_Store
 
-coverage.html
+docs/coverage.html
 docs/annotated
