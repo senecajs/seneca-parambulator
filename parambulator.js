@@ -6,37 +6,32 @@ var Parambulator = require('parambulator')
 
 var pm_custom_args = {
   rules: {
-    entity$: function (ctxt, cb) {
+    entity$: function(ctxt, cb) {
       var val = ctxt.point
       if (val.entity$) {
-        if (val.canon$({isa: ctxt.rule.spec})) {
+        if (val.canon$({ isa: ctxt.rule.spec })) {
           return cb()
-        }
-        else return ctxt.util.fail(ctxt, cb)
-      }
-      else return ctxt.util.fail(ctxt, cb)
+        } else return ctxt.util.fail(ctxt, cb)
+      } else return ctxt.util.fail(ctxt, cb)
     }
   },
   msgs: {
     entity$:
-    'The value <%=value%> is not a data entity of kind <%=rule.spec%>' +
+      'The value <%=value%> is not a data entity of kind <%=rule.spec%>' +
       ' (property <%=parentpath%>).'
   }
 }
 
-
-function parambulator (options) {
-}
-
+function parambulator() {}
 
 // Has to be preloaded as seneca.add does not wait for plugins to load.
-parambulator.preload = function parambulator_preload (plugin) {
+parambulator.preload = function parambulator_preload() {
   return {
     extend: {
-      action_modifier: function parambulator_modifier (actmeta) {
+      action_modifier: function parambulator_modifier(actmeta) {
         if (_.keys(actmeta.rules).length) {
           var pm = Parambulator(_.clone(actmeta.rules), pm_custom_args)
-          actmeta.validate = function parambulator_validate (msg, done) {
+          actmeta.validate = function parambulator_validate(msg, done) {
             pm.validate(msg, done)
           }
         }
@@ -46,6 +41,5 @@ parambulator.preload = function parambulator_preload (plugin) {
     }
   }
 }
-
 
 module.exports = parambulator
