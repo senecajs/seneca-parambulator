@@ -9,6 +9,9 @@
 [![Build Status][travis-badge]][travis-url]
 [![Gitter][gitter-badge]][gitter-url]
 
+| ![Voxgig](https://www.voxgig.com/res/img/vgt01r.png) | This open source module is sponsored and supported by [Voxgig](https://www.voxgig.com). |
+|---|---|
+
 This plugin is included by default in Seneca 2.x.
 
 **NOTE**: This plugin will not be included by default in Seneca 3.x
